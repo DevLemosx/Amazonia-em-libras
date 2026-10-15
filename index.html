@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libras Amazônica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <span>
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
+    </span>
+    Libras Amazônica
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#dicionario">Dicionário</a></li>
+    <li><a href="#trilha">Trilha</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#sugestao" class="nav-cta">Sugerir sinal</a></li>
+  </ul>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="inicio">
+  <div class="hero-bg"></div>
+  <svg class="hero-folha" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="white" d="M100,0 Q160,40 180,100 Q200,160 140,180 Q80,200 40,160 Q0,120 20,60 Q40,0 100,0Z"/>
+  </svg>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge">Plataforma educacional · IFPA</div>
+      <h1 class="hero-titulo">
+        Libras com a voz<br>da <em>Amazônia Paraense</em>
+      </h1>
+      <p class="hero-desc">
+        Aprenda a Língua Brasileira de Sinais por meio da nossa cultura, fauna, flora e cotidiano ribeirinho. Uma plataforma feita por e para quem vive a Amazônia.
+      </p>
+      <div class="hero-btns">
+        <a href="#trilha" class="btn-primario">Começar agora</a>
+        <a href="#dicionario" class="btn-secundario">Ver dicionário</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">sinais regionais</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">5</span>
+          <span class="stat-label">categorias</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3</span>
+          <span class="stat-label">níveis de trilha</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-preview">
+        <h3>Dicionário Regional</h3>
+        <div class="sinal-mini-grid">
+          <div class="sinal-mini"><span class="emoji">🐬</span><span class="palavra">Boto</span></div>
+          <div class="sinal-mini"><span class="emoji">🌿</span><span class="palavra">Açaí</span></div>
+          <div class="sinal-mini"><span class="emoji">🌊</span><span class="palavra">Igarapé</span></div>
+          <div class="sinal-mini"><span class="emoji">🌳</span><span class="palavra">Curupira</span></div>
+          <div class="sinal-mini"><span class="emoji">🦜</span><span class="palavra">Arara</span></div>
+          <div class="sinal-mini"><span class="emoji">🍲</span><span class="palavra">Tacacá</span></div>
+        </div>
+      </div>
+      <div class="hero-card-preview">
+        <h3>Trilha de aprendizagem</h3>
+        <div style="display:flex; flex-direction:column; gap:0.5rem; margin-top:0.25rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--verde-claro);display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:var(--verde-escuro);font-weight:700;">✓</div>
+            <div style="flex:1;">
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);font-weight:500;">Saudações</div>
+              <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:99px;margin-top:4px;overflow:hidden;"><div style="height:100%;background:var(--verde-claro);width:100%;border-radius:99px;"></div></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:white;font-weight:700;">2</div>
+            <div style="flex:1;">
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);font-weight:500;">Fauna Amazônica</div>
+              <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:99px;margin-top:4px;overflow:hidden;"><div style="height:100%;background:var(--terracota);width:45%;border-radius:99px;"></div></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;opacity:0.4;">
+            <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:rgba(255,255,255,0.4);">🔒</div>
+            <div style="flex:1;">
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-weight:500;">Cotidiano Ribeirinho</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DICIONÁRIO -->
+<section id="dicionario">
+  <div class="container">
+    <div class="secao-header">
+      <span class="secao-tag">Vocabulário regional</span>
+      <h2 class="secao-titulo">Dicionário Regional de Libras</h2>
+      <p class="secao-desc">Explore sinais específicos da Amazônia paraense, organizados por categoria. Cada sinal inclui espaço para o vídeo demonstrativo e exemplo em frase contextualizada.</p>
+    </div>
+
+    <div class="dicio-busca">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="buscaInput" placeholder="Buscar sinal... ex: boto, açaí" oninput="filtrarSinais()">
+    </div>
+
+    <div class="dicio-filtros">
+      <button class="filtro-btn ativo" onclick="setCategoria('todos', this)">Todos</button>
+      <button class="filtro-btn" onclick="setCategoria('fauna', this)">🐬 Fauna</button>
+      <button class="filtro-btn" onclick="setCategoria('flora', this)">🌿 Flora</button>
+      <button class="filtro-btn" onclick="setCategoria('folclore', this)">✨ Folclore</button>
+      <button class="filtro-btn" onclick="setCategoria('alimentos', this)">🍲 Alimentos</button>
+      <button class="filtro-btn" onclick="setCategoria('cotidiano', this)">🚣 Cotidiano</button>
+    </div>
+
+    <div class="dicio-grid" id="dicioGrid"></div>
+  </div>
+</section>
+
+<!-- TRILHA -->
+<section id="trilha">
+  <div class="container">
+    <div class="secao-header">
+      <span class="secao-tag" style="color:var(--verde-claro)">Aprendizado progressivo</span>
+      <h2 class="secao-titulo" style="color:var(--branco)">Trilha de Aprendizagem</h2>
+      <p class="secao-desc" style="color:rgba(255,255,255,0.65)">Do básico ao avançado: aprenda Libras em uma jornada estruturada, com exercícios interativos e contexto amazônico em cada lição.</p>
+    </div>
+
+    <div class="trilha-tabs">
+      <button class="trilha-tab ativo" onclick="setTrilha('basico', this)">Básico</button>
+      <button class="trilha-tab" onclick="setTrilha('intermediario', this)">Intermediário</button>
+      <button class="trilha-tab" onclick="setTrilha('avancado', this)">Avançado</button>
+      <button class="trilha-tab" onclick="setTrilha('amazonia', this)">Amazônia</button>
+    </div>
+
+    <div class="trilha-niveis" id="trilhaNiveis"></div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+      <div>
+        <span class="secao-tag">Pesquisa & inovação</span>
+        <h2 class="secao-titulo">Sobre o projeto</h2>
+        <div class="sobre-texto">
+          <p>O <strong>Libras Amazônica</strong> nasce da necessidade urgente de valorizar os contextos socioculturais regionais no ensino da Língua Brasileira de Sinais. Os materiais didáticos tradicionais ignoram os regionalismos da Amazônia, criando uma invisibilidade cultural para os surdos da região Norte.</p>
+          <p>Desenvolvido no <strong>Instituto Federal de Educação, Ciência e Tecnologia do Pará (IFPA)</strong>, o projeto documenta mais de 50 sinais específicos — termos como <em>igarapé</em>, <em>rabeta</em>, <em>boto</em> e <em>açaí</em> — em colaboração com a própria comunidade surda local e intérpretes de Libras.</p>
+          <p>A metodologia combina <strong>aprendizado por contexto</strong> com gamificação, garantindo que os sinais sejam apresentados em situações reais da vida amazônica, e não como listas isoladas sem significado.</p>
+        </div>
+        <div class="ods-badges">
+          <span class="ods-badge ods-04">🎯 ODS 04 — Educação de qualidade</span>
+          <span class="ods-badge ods-10">⚖️ ODS 10 — Redução das desigualdades</span>
+        </div>
+        <div class="inst-logo">
+          🎓 Instituto Federal do Pará — IFPA
+        </div>
+      </div>
+      <div>
+        <span class="secao-tag">A equipe</span>
+        <div class="equipe-cards">
+          <div class="membro-card">
+            <div class="membro-avatar">GC</div>
+            <div>
+              <div class="membro-nome">Guilherme Lemos Conceição</div>
+              <div class="membro-papel">Autor principal · Pesquisador</div>
+            </div>
+          </div>
+          <div class="membro-card">
+            <div class="membro-avatar terracota">EB</div>
+            <div>
+              <div class="membro-nome">Erick Vitor Souza Batista</div>
+              <div class="membro-papel">Coautor · Pesquisador</div>
+            </div>
+          </div>
+          <div class="membro-card">
+            <div class="membro-avatar musgo">EP</div>
+            <div>
+              <div class="membro-nome">Everton de Almeida Pinto</div>
+              <div class="membro-papel">Orientador · Professor IFPA</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--creme-escuro);border-radius:var(--radius);padding:1.25rem;margin-top:1rem;border:1px solid rgba(26,61,43,0.1);">
+          <p style="font-size:0.8rem;color:var(--texto-secundario);line-height:1.7;font-weight:300;">
+            <strong style="color:var(--verde-escuro);font-weight:500;">Referências:</strong><br>
+            QUADROS, R. M. <em>Educação de surdos</em>. Artmed, 2004.<br>
+            SKLIAR, C. <em>A surdez: um olhar sobre as diferenças</em>. Mediação, 2001.<br>
+            Lei nº 10.436/2002 · Decreto nº 5.626/2005
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUGESTÃO -->
+<section id="sugestao">
+  <div class="container">
+    <div class="secao-header">
+      <span class="secao-tag">Comunidade colaborativa</span>
+      <h2 class="secao-titulo">Sugira um novo sinal</h2>
+      <p class="secao-desc">O dicionário é vivo! Se você conhece um sinal regional que não está aqui, contribua. Toda sugestão passa por curadoria de especialistas antes de ser publicada.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+      <div class="form-sugestao">
+        <div class="form-grupo">
+          <label class="form-label">Nome do sinal / palavra *</label>
+          <input type="text" class="form-input" placeholder="Ex: Igarapé" id="f-nome">
+        </div>
+        <div class="form-grupo">
+          <label class="form-label">Categoria *</label>
+          <select class="form-select" id="f-cat">
+            <option value="">Selecione uma categoria</option>
+            <option>Fauna amazônica</option>
+            <option>Flora amazônica</option>
+            <option>Folclore</option>
+            <option>Alimentos regionais</option>
+            <option>Cotidiano ribeirinho</option>
+            <option>Outra</option>
+          </select>
+        </div>
+        <div class="form-grupo">
+          <label class="form-label">Descrição do contexto</label>
+          <textarea class="form-textarea" placeholder="Onde e como esse sinal é usado? Em qual situação você o viu?..." id="f-desc"></textarea>
+        </div>
+        <div class="form-grupo">
+          <label class="form-label">Vídeo do sinal (opcional)</label>
+          <div class="upload-area" onclick="document.getElementById('videoUpload').click()">
+            <span class="upload-ico">🎥</span>
+            <p>Clique para enviar um vídeo demonstrativo<br><small style="opacity:0.7">MP4, MOV · máx. 100MB</small></p>
+            <input type="file" id="videoUpload" accept="video/*" style="display:none">
+          </div>
+        </div>
+        <div class="form-grupo">
+          <label class="form-label">Seu nome (opcional)</label>
+          <input type="text" class="form-input" placeholder="Ex: Maria Silva" id="f-autor">
+        </div>
+        <button class="btn-primario" onclick="enviarSugestao()" style="width:100%;text-align:center;">Enviar sugestão</button>
+        <div class="form-aviso">
+          ⚠️ Toda sugestão passa por revisão e curadoria da equipe e de intérpretes de Libras do IFPA antes de ser publicada no dicionário.
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--verde-escuro);border-radius:var(--radius);padding:2rem;color:white;">
+          <h3 style="font-family:var(--fonte-display);font-size:1.3rem;margin-bottom:1rem;font-weight:600;">Como funciona o processo?</h3>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">1</div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Você envia a sugestão</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">Preencha o formulário com o nome, categoria e — se possível — um vídeo do sinal.</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">2</div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Curadoria especializada</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">Intérpretes e pesquisadores do IFPA avaliam a validade regional do sinal.</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">3</div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Gravação em vídeo</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">Um membro da comunidade surda local grava o sinal em alta qualidade.</p></div>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <div style="width:32px;height:32px;border-radius:50%;background:var(--verde-claro);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;color:var(--verde-escuro);">✓</div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Publicado no dicionário!</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">O sinal é adicionado ao acervo, preservando a identidade cultural amazônica.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-logo">Libras Amazônica</div>
+      <p class="footer-desc">Uma plataforma educacional para o ensino contextualizado da Língua Brasileira de Sinais com enfoque na cultura amazônica paraense.</p>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Desenvolvido no âmbito do IFPA · Paragominas, Pará</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#dicionario">Dicionário</a></li>
+        <li><a href="#trilha">Trilha</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#sugestao">Sugerir sinal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Referências</h4>
+      <ul>
+        <li><a href="#">Lei nº 10.436/2002</a></li>
+        <li><a href="#">Decreto nº 5.626/2005</a></li>
+        <li><a href="#">IFPA</a></li>
+        <li><a href="#">Quadros (2004)</a></li>
+        <li><a href="#">Skliar (2001)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Libras Amazônica · IFPA · Todos os direitos reservados</span>
+    <span>ODS 04 · ODS 10</span>
+  </div>
+</footer>
+
+<!-- MODAL EXERCÍCIO -->
+<div class="modal-overlay" id="modalExercicio">
+  <div class="modal-box">
+    <button class="modal-close" onclick="fecharModal()">✕</button>
+    <div class="exercicio-header">
+      <h2 class="exercicio-titulo" id="exTitulo">Exercício</h2>
+      <div class="exercicio-progresso">
+        <span id="exNumero">1 / 5</span>
+        <div class="ex-barra"><div class="ex-barra-fill" id="exBarra" style="width:20%"></div></div>
+        <div class="vidas-display" id="vidasDisplay">
+          <span class="vida">❤️</span>
+          <span class="vida">❤️</span>
+          <span class="vida">❤️</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exercicio-video-espaco" id="exVideoArea">
+      <svg viewBox="0 0 24 24"><path d="m15 10 4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.914L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <p id="exVideoLabel">Vídeo do sinal em Libras<br><small style="opacity:0.7">Será exibido aqui</small></p>
+    </div>
+
+    <p class="exercicio-pergunta" id="exPergunta"></p>
+
+    <div class="opcoes-grid" id="exOpcoes"></div>
+
+    <div class="feedback-msg" id="feedbackMsg"></div>
+
+    <div class="modal-nav">
+      <button class="btn-secundario" onclick="fecharModal()" style="padding:10px 24px;font-size:0.85rem;color:var(--texto-secundario);border-color:rgba(0,0,0,0.15);">Sair da lição</button>
+      <button class="btn-primario" id="btnProximo" onclick="proximoExercicio()" style="display:none;padding:10px 24px;font-size:0.85rem;">Próximo →</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
