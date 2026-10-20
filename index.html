@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Libras Amazônica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
-
 </head>
 <body>
 
@@ -16,7 +15,7 @@
 <nav>
   <a href="#inicio" class="nav-logo">
     <span>
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
     </span>
     Libras Amazônica
   </a>
@@ -27,7 +26,7 @@
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#sugestao" class="nav-cta">Sugerir sinal</a></li>
   </ul>
-  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -35,7 +34,7 @@
 <!-- HERO -->
 <section id="inicio">
   <div class="hero-bg"></div>
-  <svg class="hero-folha" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <svg class="hero-folha" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path fill="white" d="M100,0 Q160,40 180,100 Q200,160 140,180 Q80,200 40,160 Q0,120 20,60 Q40,0 100,0Z"/>
   </svg>
   <div class="hero-content">
@@ -61,8 +60,8 @@
           <span class="stat-label">categorias</span>
         </div>
         <div class="stat-item">
-          <span class="stat-num">3</span>
-          <span class="stat-label">níveis de trilha</span>
+          <span class="stat-num">4</span>
+          <span class="stat-label">trilhas de estudo</span>
         </div>
       </div>
     </div>
@@ -71,9 +70,9 @@
         <h3>Dicionário Regional</h3>
         <div class="sinal-mini-grid">
           <div class="sinal-mini"><span class="emoji">🐬</span><span class="palavra">Boto</span></div>
-          <div class="sinal-mini"><span class="emoji">🌿</span><span class="palavra">Açaí</span></div>
+          <div class="sinal-mini"><span class="emoji">🫐</span><span class="palavra">Açaí</span></div>
           <div class="sinal-mini"><span class="emoji">🌊</span><span class="palavra">Igarapé</span></div>
-          <div class="sinal-mini"><span class="emoji">🌳</span><span class="palavra">Curupira</span></div>
+          <div class="sinal-mini"><span class="emoji">🧚</span><span class="palavra">Curupira</span></div>
           <div class="sinal-mini"><span class="emoji">🦜</span><span class="palavra">Arara</span></div>
           <div class="sinal-mini"><span class="emoji">🍲</span><span class="palavra">Tacacá</span></div>
         </div>
@@ -95,10 +94,10 @@
               <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:99px;margin-top:4px;overflow:hidden;"><div style="height:100%;background:var(--terracota);width:45%;border-radius:99px;"></div></div>
             </div>
           </div>
-          <div style="display:flex;align-items:center;gap:0.75rem;opacity:0.4;">
+          <div style="display:flex;align-items:center;gap:0.75rem;opacity:0.5;">
             <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:rgba(255,255,255,0.4);">🔒</div>
             <div style="flex:1;">
-              <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-weight:500;">Cotidiano Ribeirinho</div>
+              <div style="font-size:0.8rem;color:rgba(255,255,255,0.7);font-weight:500;">Cotidiano Ribeirinho</div>
             </div>
           </div>
         </div>
@@ -113,12 +112,12 @@
     <div class="secao-header">
       <span class="secao-tag">Vocabulário regional</span>
       <h2 class="secao-titulo">Dicionário Regional de Libras</h2>
-      <p class="secao-desc">Explore sinais específicos da Amazônia paraense, organizados por categoria. Cada sinal inclui espaço para o vídeo demonstrativo e exemplo em frase contextualizada.</p>
+      <p class="secao-desc">Explore sinais específicos da Amazônia paraense, organizados por categoria. Passe o mouse (ou toque) no card para ver o vídeo do sinal, com exemplo em frase contextualizada.</p>
     </div>
 
     <div class="dicio-busca">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="buscaInput" placeholder="Buscar sinal... ex: boto, açaí" oninput="filtrarSinais()">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="buscaInput" placeholder="Buscar sinal... ex: boto, açaí" aria-label="Buscar sinal" oninput="filtrarSinais()">
     </div>
 
     <div class="dicio-filtros">
@@ -140,7 +139,7 @@
     <div class="secao-header">
       <span class="secao-tag" style="color:var(--verde-claro)">Aprendizado progressivo</span>
       <h2 class="secao-titulo" style="color:var(--branco)">Trilha de Aprendizagem</h2>
-      <p class="secao-desc" style="color:rgba(255,255,255,0.65)">Do básico ao avançado: aprenda Libras em uma jornada estruturada, com exercícios interativos e contexto amazônico em cada lição.</p>
+      <p class="secao-desc" style="color:rgba(255,255,255,0.75)">Do básico ao avançado: aprenda Libras em uma jornada estruturada, com exercícios interativos e contexto amazônico em cada lição. Seu progresso fica salvo neste navegador.</p>
     </div>
 
     <div class="trilha-tabs">
@@ -220,14 +219,14 @@
       <h2 class="secao-titulo">Sugira um novo sinal</h2>
       <p class="secao-desc">O dicionário é vivo! Se você conhece um sinal regional que não está aqui, contribua. Toda sugestão passa por curadoria de especialistas antes de ser publicada.</p>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+    <div class="sugestao-grid">
       <div class="form-sugestao">
         <div class="form-grupo">
-          <label class="form-label">Nome do sinal / palavra *</label>
+          <label class="form-label" for="f-nome">Nome do sinal / palavra *</label>
           <input type="text" class="form-input" placeholder="Ex: Igarapé" id="f-nome">
         </div>
         <div class="form-grupo">
-          <label class="form-label">Categoria *</label>
+          <label class="form-label" for="f-cat">Categoria *</label>
           <select class="form-select" id="f-cat">
             <option value="">Selecione uma categoria</option>
             <option>Fauna amazônica</option>
@@ -239,7 +238,7 @@
           </select>
         </div>
         <div class="form-grupo">
-          <label class="form-label">Descrição do contexto</label>
+          <label class="form-label" for="f-desc">Descrição do contexto</label>
           <textarea class="form-textarea" placeholder="Onde e como esse sinal é usado? Em qual situação você o viu?..." id="f-desc"></textarea>
         </div>
         <div class="form-grupo">
@@ -251,7 +250,7 @@
           </div>
         </div>
         <div class="form-grupo">
-          <label class="form-label">Seu nome (opcional)</label>
+          <label class="form-label" for="f-autor">Seu nome (opcional)</label>
           <input type="text" class="form-input" placeholder="Ex: Maria Silva" id="f-autor">
         </div>
         <button class="btn-primario" onclick="enviarSugestao()" style="width:100%;text-align:center;">Enviar sugestão</button>
@@ -265,19 +264,19 @@
           <div style="display:flex;flex-direction:column;gap:1rem;">
             <div style="display:flex;gap:1rem;align-items:flex-start;">
               <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">1</div>
-              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Você envia a sugestão</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">Preencha o formulário com o nome, categoria e — se possível — um vídeo do sinal.</p></div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Você envia a sugestão</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6;">Preencha o formulário com o nome, categoria e — se possível — um vídeo do sinal.</p></div>
             </div>
             <div style="display:flex;gap:1rem;align-items:flex-start;">
               <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">2</div>
-              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Curadoria especializada</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">Intérpretes e pesquisadores do IFPA avaliam a validade regional do sinal.</p></div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Curadoria especializada</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6;">Intérpretes e pesquisadores do IFPA avaliam a validade regional do sinal.</p></div>
             </div>
             <div style="display:flex;gap:1rem;align-items:flex-start;">
               <div style="width:32px;height:32px;border-radius:50%;background:var(--terracota);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;">3</div>
-              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Gravação em vídeo</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">Um membro da comunidade surda local grava o sinal em alta qualidade.</p></div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Gravação em vídeo</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6;">Um membro da comunidade surda local grava o sinal em alta qualidade.</p></div>
             </div>
             <div style="display:flex;gap:1rem;align-items:flex-start;">
               <div style="width:32px;height:32px;border-radius:50%;background:var(--verde-claro);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0;color:var(--verde-escuro);">✓</div>
-              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Publicado no dicionário!</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.6);line-height:1.6;">O sinal é adicionado ao acervo, preservando a identidade cultural amazônica.</p></div>
+              <div><strong style="color:var(--verde-claro);display:block;margin-bottom:3px;font-size:0.9rem;">Publicado no dicionário!</strong><p style="font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.6;">O sinal é adicionado ao acervo, preservando a identidade cultural amazônica.</p></div>
             </div>
           </div>
         </div>
@@ -292,7 +291,7 @@
     <div class="footer-col">
       <div class="footer-logo">Libras Amazônica</div>
       <p class="footer-desc">Uma plataforma educacional para o ensino contextualizado da Língua Brasileira de Sinais com enfoque na cultura amazônica paraense.</p>
-      <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);">Desenvolvido no âmbito do IFPA · Paragominas, Pará</p>
+      <p style="font-size:0.75rem;color:rgba(255,255,255,0.5);">Desenvolvido no âmbito do IFPA · Paragominas, Pará</p>
     </div>
     <div class="footer-col">
       <h4>Navegação</h4>
@@ -307,11 +306,11 @@
     <div class="footer-col">
       <h4>Referências</h4>
       <ul>
-        <li><a href="#">Lei nº 10.436/2002</a></li>
-        <li><a href="#">Decreto nº 5.626/2005</a></li>
-        <li><a href="#">IFPA</a></li>
-        <li><a href="#">Quadros (2004)</a></li>
-        <li><a href="#">Skliar (2001)</a></li>
+        <li><a href="https://www.planalto.gov.br/ccivil_03/leis/2002/l10436.htm" target="_blank" rel="noopener">Lei nº 10.436/2002</a></li>
+        <li><a href="https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/decreto/d5626.htm" target="_blank" rel="noopener">Decreto nº 5.626/2005</a></li>
+        <li><a href="https://www.ifpa.edu.br" target="_blank" rel="noopener">IFPA</a></li>
+        <li><a href="#sobre">Quadros (2004)</a></li>
+        <li><a href="#sobre">Skliar (2001)</a></li>
       </ul>
     </div>
   </div>
@@ -322,15 +321,15 @@
 </footer>
 
 <!-- MODAL EXERCÍCIO -->
-<div class="modal-overlay" id="modalExercicio">
+<div class="modal-overlay" id="modalExercicio" role="dialog" aria-modal="true" aria-labelledby="exTitulo">
   <div class="modal-box">
-    <button class="modal-close" onclick="fecharModal()">✕</button>
+    <button class="modal-close" id="modalFechar" onclick="fecharModal()" aria-label="Fechar lição">✕</button>
     <div class="exercicio-header">
       <h2 class="exercicio-titulo" id="exTitulo">Exercício</h2>
       <div class="exercicio-progresso">
         <span id="exNumero">1 / 5</span>
         <div class="ex-barra"><div class="ex-barra-fill" id="exBarra" style="width:20%"></div></div>
-        <div class="vidas-display" id="vidasDisplay">
+        <div class="vidas-display" id="vidasDisplay" aria-label="Vidas restantes">
           <span class="vida">❤️</span>
           <span class="vida">❤️</span>
           <span class="vida">❤️</span>
@@ -339,25 +338,25 @@
     </div>
 
     <div class="exercicio-video-espaco" id="exVideoArea">
-      <svg viewBox="0 0 24 24"><path d="m15 10 4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.914L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 10 4.553-2.069A1 1 0 0 1 21 8.845v6.31a1 1 0 0 1-1.447.914L15 14M3 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
       <p id="exVideoLabel">Vídeo do sinal em Libras<br><small style="opacity:0.7">Será exibido aqui</small></p>
     </div>
 
-    <p class="exercicio-pergunta" id="exPergunta"></p>
+    <p class="exercicio-pergunta" id="exPergunta" aria-live="polite"></p>
 
     <div class="opcoes-grid" id="exOpcoes"></div>
 
-    <div class="feedback-msg" id="feedbackMsg"></div>
+    <div class="feedback-msg" id="feedbackMsg" role="status"></div>
 
     <div class="modal-nav">
-      <button class="btn-secundario" onclick="fecharModal()" style="padding:10px 24px;font-size:0.85rem;color:var(--texto-secundario);border-color:rgba(0,0,0,0.15);">Sair da lição</button>
+      <button class="btn-secundario" onclick="fecharModal()" style="padding:10px 24px;font-size:0.85rem;color:var(--texto-secundario);border-color:rgba(0,0,0,0.25);">Sair da lição</button>
       <button class="btn-primario" id="btnProximo" onclick="proximoExercicio()" style="display:none;padding:10px 24px;font-size:0.85rem;">Próximo →</button>
     </div>
   </div>
 </div>
 
 <!-- TOAST -->
-<div class="toast" id="toast"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>
